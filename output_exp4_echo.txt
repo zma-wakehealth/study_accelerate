@@ -1,0 +1,11 @@
+Node numbers: 2
+GPU numbers: 2
+node list: demon[120-121]
+number of tasks: 
+node list= demon120 demon121
+i am in demon120
+my machine id is 0
+slurm gpu is 2
+i am in demon121
+my machine id is 1
+slurm gpu is 1

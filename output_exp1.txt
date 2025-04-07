@@ -1,0 +1,35 @@
+Node numbers: 3
+GPU numbers: 3
+node list: demon[118,132-133]
+number of tasks: 
+node list= demon118 demon132 demon133
+i am in demon118
+my machine id is 0
+i am in demon132
+my machine id is 1
+i am in demon133
+my machine id is 2
+in hostname= demon118 tensor([ 1.9269, -1.0284], device='cuda:0')
+in hostname= demon118 tensor([-0.4628,  1.8603], device='cuda:0')
+in hostname= demon118 tensor([[ 0.2772,  0.0131, -0.1886,  ...,  0.0889, -0.2455, -0.1298],
+        [ 0.2473,  0.0064, -0.3129,  ..., -0.2237, -0.0496, -0.2723]],
+       device='cuda:0', grad_fn=<AddmmBackward0>)
+in hostname= demon118 tensor([[ 0.1843,  0.0202, -0.1148,  ..., -0.1303, -0.1465,  0.0462],
+        [ 0.0946, -0.1037, -0.5110,  ...,  0.1378, -0.0544, -0.3325]],
+       device='cuda:0', grad_fn=<AddmmBackward0>)
+in hostname= demon133 tensor([-2.4740, -1.4477], device='cuda:0')
+in hostname= demon133 tensor([-0.9928, -0.8829], device='cuda:0')
+in hostname= demon133 tensor([[-0.1132,  0.1595,  0.0596,  ..., -0.1495,  0.2646, -0.0413],
+        [-0.0788,  0.1277, -0.0216,  ...,  0.0244,  0.1276, -0.2148]],
+       device='cuda:0', grad_fn=<AddmmBackward0>)
+in hostname= demon133 tensor([[ 0.0391, -0.4800,  0.0550,  ..., -0.0959, -0.2388, -0.1736],
+        [-0.2449, -0.1117, -0.1112,  ..., -0.1030, -0.0781,  0.3049]],
+       device='cuda:0', grad_fn=<AddmmBackward0>)
+in hostname= demon132 tensor([-0.9928, -0.8829], device='cuda:0')
+in hostname= demon132 tensor([ 1.9269, -1.0284], device='cuda:0')
+in hostname= demon132 tensor([[ 0.0391, -0.4800,  0.0550,  ..., -0.0959, -0.2388, -0.1736],
+        [-0.2449, -0.1117, -0.1112,  ..., -0.1030, -0.0781,  0.3049]],
+       device='cuda:0', grad_fn=<AddmmBackward0>)
+in hostname= demon132 tensor([[ 0.2772,  0.0131, -0.1886,  ...,  0.0889, -0.2455, -0.1298],
+        [ 0.2473,  0.0064, -0.3129,  ..., -0.2237, -0.0496, -0.2723]],
+       device='cuda:0', grad_fn=<AddmmBackward0>)

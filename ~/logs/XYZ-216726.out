@@ -1,0 +1,36 @@
+++ date
++ echo 'START TIME: Fri Apr  4 09:51:58 AM EDT 2025'
+START TIME: Fri Apr  4 09:51:58 AM EDT 2025
++ GPUS_PER_NODE=1
+++ head -n 1
+++ scontrol show hostnames 'demon[110-111]'
++ MASTER_ADDR=demon110
++ MASTER_PORT=6000
++ NNODES=2
++ NODE_RANK=0
++ WORLD_SIZE=2
++ CMD='     test1.py
+    '
++ LAUNCHER='accelerate launch     --multi_gpu     --num_machines 2     --num_processes 2     --main_process_ip demon110     --main_process_port 6000     --num_processes 2     --machine_rank $SLURM_PROCID     --role demon110:     --rdzv_conf rdzv_backend=c10d     --max_restarts 0     --tee 3 '
++ SRUN_ARGS='     --wait=60     --kill-on-bad-exit=1     '
++ clear
+[H[2J[3J+ srun --wait=60 --kill-on-bad-exit=1 --jobid 216726 bash -c 'accelerate launch     --multi_gpu     --num_machines 2     --num_processes 2     --main_process_ip demon110     --main_process_port 6000     --num_processes 2     --machine_rank $SLURM_PROCID     --role demon110:     --rdzv_conf rdzv_backend=c10d     --max_restarts 0     --tee 3       test1.py
+    '
++ tee /home/zhma/logs/%x-%j.txt
+tee: /home/zhma/logs/%x-%j.txt: No such file or directory
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+[demon110:0]:[rank0]:[W404 09:52:11.054519981 ProcessGroupNCCL.cpp:1168] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[demon110:0]:[rank1]:[W404 09:52:11.983847686 ProcessGroupNCCL.cpp:1168] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[demon110:0]:tensor([0, 1], device='cuda:0')
+[demon110:0]:tensor([4, 5], device='cuda:0')
+[demon110:0]:tensor([8, 9], device='cuda:0')
+[demon110:0]:tensor([2, 3], device='cuda:0')
+[demon110:0]:tensor([6, 7], device='cuda:0')
+[demon110:0]:tensor([0, 1], device='cuda:0')

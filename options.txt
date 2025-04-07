@@ -1,0 +1,10 @@
+--cpus-per-task=ncpus   number of cpus required per task
+--ntasks=ntasks         number of tasks to run
+--ntasks-per-node=n     number of tasks to invoke on each node
+--nodes=N               number of nodes on which to run (N = min[-max])
+--gpus=n                count of GPUs required for the job
+--gpus-per-node=n       number of GPUs required per allocated node
+--gpus-per-task=n       number of GPUs required per spawned task
+--ntasks-per-node=n     number of tasks to invoke on each node
+
+to get the gpu ids, need to use $SLURM_STEP_GPUS, not the CUDA library, it will see all gpus on the machine
