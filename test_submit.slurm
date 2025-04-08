@@ -8,6 +8,7 @@
 #SBATCH --output=output_exp4_echo.txt
 #SBATCH --nodelist=demon120,demon121
 
+# following two lines are for test purpose only!!
 #SBATCH --nodes=2                               # this is for testing purpose only
 #SBATCH --gpus-per-node=1                       # same here
 
